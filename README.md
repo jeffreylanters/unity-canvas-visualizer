@@ -1,6 +1,6 @@
 # UI Canvas Visualizer
 
-UI canvas visualizer helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.
+UI canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.
 
 ## Install
 
