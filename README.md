@@ -6,9 +6,11 @@ UI canvas visualizer is an editor util that helps you visualise all of your rect
 
 ## Install
 
-```sh
-$ git submodule add https://github.com/unity-packages/ui-canvas-visualizer Assets/packages/ui-canvas-visualizer
 ```
+"com.unity-packages.ui-canvas-visualizer": "git+https://github.com/unity-packages/ui-canvas-visualizer"
+```
+
+[Click here to read the Unity Packages installation guide](https://github.com/unity-packages/installation)
 
 ## Usage
 

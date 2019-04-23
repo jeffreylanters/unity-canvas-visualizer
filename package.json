@@ -1,0 +1,7 @@
+{
+  "name": "com.unity-packages.ui-canvas-visualizer",
+  "displayName": "UI Canvas Visualizer",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "description": "UI canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface."
+}
