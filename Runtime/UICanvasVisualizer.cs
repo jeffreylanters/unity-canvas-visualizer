@@ -19,15 +19,15 @@ namespace UnityPackages.UI {
 			var _rectTransforms = this.GetComponentsInChildren<RectTransform> ();
 
 			foreach (var _rectTransform in _rectTransforms) {
-				this.DrawRectTransform (_rectTransform, this.inactiveColor);
+				this.DrawRectTransformInline (_rectTransform, this.inactiveColor);
 
 				var _graphic = _rectTransform.GetComponent<Graphic> ();
 				if (_graphic != null &&
 					_graphic.raycastTarget == true) {
 					var _lightRaycastColor = this.raycastColor;
-					_lightRaycastColor.a = .5f;
-					this.DrawRectTransform (_rectTransform, _lightRaycastColor, true);
-					this.DrawRectTransform (_rectTransform, this.raycastColor);
+					_lightRaycastColor.a = .1f;
+					this.DrawRectTransformOutline (_rectTransform, this.raycastColor);
+					this.DrawRectTransformFill (_rectTransform, _lightRaycastColor);
 				}
 			}
 
@@ -35,32 +35,54 @@ namespace UnityPackages.UI {
 				var _selectionRectTransformChildren =
 					Selection.activeGameObject.GetComponentsInChildren<RectTransform> ();
 				foreach (var _rectTransform in _selectionRectTransformChildren)
-					this.DrawRectTransform (_rectTransform, this.childColor);
-				this.DrawRectTransform (
+					this.DrawRectTransformInline (_rectTransform, this.childColor);
+				this.DrawRectTransformInline (
 					Selection.activeGameObject.GetComponent<RectTransform> (),
 					this.selectionColor);
 			}
 		}
 
-		private void DrawRectTransform (RectTransform rectTransform, Color color, bool fill = false) {
+		private void DrawRectTransformInline (RectTransform rectTransform, Color color) {
 			var _corners = new Vector3[4];
 			Gizmos.color = color;
 			rectTransform.GetWorldCorners (_corners);
-			if (fill == false)
-				for (var _i = 0; _i < 4; _i++)
-					Gizmos.DrawLine (
-						_corners[_i],
-						_corners[_i == 3 ? 0 : _i + 1]);
-			else
-				Gizmos.DrawCube (
-					new Vector3 (
-						_corners[0].x + ((_corners[2].x - _corners[0].x) / 2f),
-						_corners[0].y + ((_corners[1].y - _corners[0].y) / 2f)
-					),
-					new Vector3 (
-						_corners[0].x - _corners[2].x,
-						_corners[0].y - _corners[1].y
-					));
+			for (var _i = 0; _i < 4; _i++)
+				Gizmos.DrawLine (
+					_corners[_i],
+					_corners[_i == 3 ? 0 : _i + 1]);
+		}
+
+		private void DrawRectTransformOutline (RectTransform rectTransform, Color color) {
+			var _corners = new Vector3[4];
+			Gizmos.color = color;
+			rectTransform.GetWorldCorners (_corners);
+			_corners[0].x--;
+			_corners[0].y--;
+			_corners[1].x--;
+			_corners[1].y++;
+			_corners[2].x++;
+			_corners[2].y++;
+			_corners[3].x++;
+			_corners[3].y--;
+			for (var _i = 0; _i < 4; _i++)
+				Gizmos.DrawLine (
+					_corners[_i],
+					_corners[_i == 3 ? 0 : _i + 1]);
+		}
+
+		private void DrawRectTransformFill (RectTransform rectTransform, Color color) {
+			var _corners = new Vector3[4];
+			Gizmos.color = color;
+			rectTransform.GetWorldCorners (_corners);
+			Gizmos.DrawCube (
+				new Vector3 (
+					_corners[0].x + ((_corners[2].x - _corners[0].x) / 2f),
+					_corners[0].y + ((_corners[1].y - _corners[0].y) / 2f)
+				),
+				new Vector3 (
+					_corners[0].x - _corners[2].x,
+					_corners[0].y - _corners[1].y
+				));
 		}
 	}
 }
