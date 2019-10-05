@@ -43,6 +43,8 @@ namespace UnityPackages.UI {
 		}
 
 		private void DrawRectTransformInline (RectTransform rectTransform, Color color) {
+			if (this.IsActiveOrVisible(rectTransform) == false)
+				return;
 			var _corners = new Vector3[4];
 			Gizmos.color = color;
 			rectTransform.GetWorldCorners (_corners);
@@ -53,6 +55,8 @@ namespace UnityPackages.UI {
 		}
 
 		private void DrawRectTransformOutline (RectTransform rectTransform, Color color) {
+			if (this.IsActiveOrVisible(rectTransform) == false)
+				return;
 			var _corners = new Vector3[4];
 			Gizmos.color = color;
 			rectTransform.GetWorldCorners (_corners);
@@ -71,6 +75,8 @@ namespace UnityPackages.UI {
 		}
 
 		private void DrawRectTransformFill (RectTransform rectTransform, Color color) {
+			if (this.IsActiveOrVisible(rectTransform) == false)
+				return;
 			var _corners = new Vector3[4];
 			Gizmos.color = color;
 			rectTransform.GetWorldCorners (_corners);
@@ -83,6 +89,10 @@ namespace UnityPackages.UI {
 					_corners[0].x - _corners[2].x,
 					_corners[0].y - _corners[1].y
 				));
+		}
+		
+		private bool IsActiveOrVisible (RectTransform rectTransform) {
+			return SceneVisibilityManager.instance.IsHidden (rectTransform.gameObject) && rectTransform.gameObject.activeSelf;
 		}
 	}
 }
