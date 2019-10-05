@@ -92,7 +92,7 @@ namespace UnityPackages.UI {
 		}
 		
 		private bool IsActiveOrVisible (RectTransform rectTransform) {
-			return SceneVisibilityManager.instance.IsHidden (rectTransform.gameObject) && rectTransform.gameObject.activeSelf;
+			return SceneVisibilityManager.instance.IsHidden (rectTransform.gameObject) == false && rectTransform.gameObject.activeSelf;
 		}
 	}
 }
