@@ -1,4 +1,3 @@
-﻿#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -12,6 +11,8 @@ namespace UnityPackages.UI {
 		public Color selectionColor = new Color (1, 1, 0);
 		public Color childColor = new Color (1, 0, 1);
 		public Color raycastColor = new Color (1, 0, 0, 1);
+		
+		#if UNITY_EDITOR
 
 		private void OnDrawGizmos () {
 			var _selectionIsRectTransform = Selection.activeGameObject == null ?
@@ -94,6 +95,7 @@ namespace UnityPackages.UI {
 		private bool IsActiveOrVisible (RectTransform rectTransform) {
 			return SceneVisibilityManager.instance.IsHidden (rectTransform.gameObject) == false && rectTransform.gameObject.activeSelf;
 		}
+		
+		#endif
 	}
 }
-#endif
