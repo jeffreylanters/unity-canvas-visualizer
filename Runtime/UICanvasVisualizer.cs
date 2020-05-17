@@ -27,7 +27,8 @@ namespace UnityPackages.UI {
 					_graphic.raycastTarget == true) {
 					var _lightRaycastColor = this.raycastColor;
 					_lightRaycastColor.a = .1f;
-					this.DrawRectTransformOutline (_rectTransform, this.raycastColor);
+					// this.DrawRectTransformOutline (_rectTransform, this.raycastColor);
+					this.DrawRectTransformInline (_rectTransform, this.raycastColor);
 					this.DrawRectTransformFill (_rectTransform, _lightRaycastColor);
 				}
 			}
