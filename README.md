@@ -1,16 +1,38 @@
-# UI Canvas Visualizer
+<div align="center">
 
-UI canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.
+<img src="https://raw.githubusercontent.com/elraccoone/unity-canvas-visualizer/master/.github/WIKI/logo.jpg" height="100px"></br>
 
-> NOTE When using this Unity Package, make sure to **Star** this repository. When using any of the packages please make sure to give credits to **Jeffrey Lanters** somewhere in your app or game. **THESE PACKAGES ARE NOT ALLOWED TO BE SOLD ANYWHERE!**
+# Canvas Visualizer
 
-## Install
+[![npm](https://img.shields.io/badge/upm-1.4.0-232c37.svg?style=for-the-badge)]()
+[![license](https://img.shields.io/badge/license-Custom-%23ecc531.svg?style=for-the-badge)](./LICENSE.md)
+[![npm](https://img.shields.io/badge/sponsor-donate-E12C9A.svg?style=for-the-badge)](https://paypal.me/jeffreylanters)
+[![npm](https://img.shields.io/github/stars/elraccoone/unity-canvas-visualizer.svg?style=for-the-badge)]()
 
+The canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.
+
+When using any of the packages, please make sure to **Star** this repository and give credit to **Jeffrey Lanters / El Raccoone** somewhere in your app or game. **It it prohibited to sublicense and/or sell copies of the Software in stores such as the Unity Asset Store!**
+
+**&Lt;**
+[**Installation**](#installation) &middot;
+[**Documentation**](#documentation) &middot;
+[**License**](./LICENSE.md) &middot;
+[**Sponsor**](https://paypal.me/jeffreylanters)
+**&Gt;**
+
+**Made with &hearts; by Jeffrey Lanters**
+
+</div>
+
+# Installation
+
+Install using the Unity Package Manager. add the following line to your `manifest.json` file located within your project's packages directory.
+
+```json
+"nl.elraccoone.canvas-visualizer": "git+https://github.com/elraccoone/unity-canvas-visualizer"
 ```
-"com.unity-packages.ui-canvas-visualizer": "git+https://github.com/unity-packages/ui-canvas-visualizer"
-```
 
-[Click here to read the Unity Packages installation guide](https://github.com/unity-packages/installation)
+# Documentation
 
 ## Usage
 

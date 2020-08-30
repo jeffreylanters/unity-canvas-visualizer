@@ -4,15 +4,15 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UnityPackages.UI {
-	public class UICanvasVisualizer : MonoBehaviour {
+namespace ElRaccoone.CanvasVisualizer {
+  public class CanvasVisualizer : MonoBehaviour {
+
+#if UNITY_EDITOR
 
 		public Color inactiveColor = new Color (1, 1, 1, .5f);
 		public Color selectionColor = new Color (1, 1, 0);
 		public Color childColor = new Color (1, 0, 1);
 		public Color raycastColor = new Color (1, 0, 0, 1);
-		
-		#if UNITY_EDITOR
 
 		private void OnDrawGizmos () {
 			var _selectionIsRectTransform = Selection.activeGameObject == null ?
@@ -97,6 +97,6 @@ namespace UnityPackages.UI {
 			return SceneVisibilityManager.instance.IsHidden (rectTransform.gameObject) == false && rectTransform.gameObject.activeSelf;
 		}
 		
-		#endif
-	}
+#endif
+  }
 }
