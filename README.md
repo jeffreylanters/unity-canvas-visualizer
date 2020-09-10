@@ -13,8 +13,6 @@
 
 The canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.
 
-When using any of the packages, please make sure to **Star** this repository and give credit to **Jeffrey Lanters / El Raccoone** somewhere in your app or game. **It it prohibited to sublicense and/or sell copies of the Software in stores such as the Unity Asset Store!**
-
 **&Lt;**
 [**Installation**](#installation) &middot;
 [**Documentation**](#documentation) &middot;
