@@ -1,15 +1,14 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/elraccoone/unity-canvas-visualizer/master/.github/WIKI/logo.jpg" height="100px">
+<img src="https://raw.githubusercontent.com/elraccoone/unity-canvas-visualizer/master/.github/WIKI/logo-transparent.png" height="100px">
 
 </br>
 
 # Canvas Visualizer
 
-[![npm](https://img.shields.io/badge/upm-1.4.0-232c37.svg?style=for-the-badge)]()
-[![license](https://img.shields.io/badge/license-Custom-%23ecc531.svg?style=for-the-badge)](./LICENSE.md)
-[![npm](https://img.shields.io/github/stars/elraccoone/unity-canvas-visualizer.svg?style=for-the-badge)]()
-[![npm](https://img.shields.io/badge/build-passing-brightgreen.svg?style=for-the-badge)]()
+[![openupm](https://img.shields.io/npm/v/nl.elraccoone.canvas-visualizer?label=UPM&registry_uri=https://package.openupm.com&style=for-the-badge&color=232c37)](https://openupm.com/packages/nl.elraccoone.canvas-visualizer/)
+[![](https://img.shields.io/github/stars/elraccoone/unity-canvas-visualizer.svg?style=for-the-badge)]()
+[![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=for-the-badge)]()
 
 The canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.
 
