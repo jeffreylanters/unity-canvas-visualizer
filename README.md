@@ -53,6 +53,6 @@ openupm add nl.elraccoone.canvas-visualizer
 
 ## Usage
 
-Add the component to any canvas in your scene, optionally customize the colors in the inspector and watch your canvas come to live in the scene view!
+Add the component to any canvas in your scene, optionally customize the colors in the inspector and watch your canvas come to life in the scene view!
 
 <img src="https://raw.githubusercontent.com/jeffreylanters/unity-canvas-visualizer/master/.github/WIKI/example.png" width="100%"></br>
