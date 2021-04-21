@@ -33,14 +33,26 @@ Hi! My name is Jeffrey Lanters, thanks for checking out my modules! I've been a 
 
 # Installation
 
-Install the latest stable release using the Unity Package Manager by adding the following line to your `manifest.json` file located within your project's Packages directory.
+### Using the Unity Package Manager
+
+Install the latest stable release using the Unity Package Manager by adding the following line to your `manifest.json` file located within your project's Packages directory, or by adding the Git URL to the Package Manager Window inside of Unity.
 
 ```json
 "nl.elraccoone.canvas-visualizer": "git+https://github.com/jeffreylanters/unity-canvas-visualizer"
+```
+
+### Using OpenUPM
+
+The module is availble on the OpenUPM package registry, you can install the latest stable release using the OpenUPM Package manager's Command Line Tool using the following command.
+
+```sh
+openupm add nl.elraccoone.canvas-visualizer
 ```
 
 # Documentation
 
 ## Usage
 
-Add the component to any canvas in your scene. You can optional customize the colors in the inspector.
+Add the component to any canvas in your scene, optionally customize the colors in the inspector and watch your canvas come to live in the scene view!
+
+<img src="https://raw.githubusercontent.com/jeffreylanters/unity-entity-component-system/master/.github/WIKI/example.png" width="100%"></br>
