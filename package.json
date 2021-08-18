@@ -3,5 +3,10 @@
   "displayName": "Canvas Visualizer",
   "version": "1.4.1",
   "unity": "2018.3",
-  "description": "The canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface."
+  "description": "The canvas visualizer is an editor util that helps you visualise all of your rectangle transforms within your canvas for easier navigation and building while working on your user interface.",
+  "type": "library",
+  "hideInEditor": false,
+  "documentationUrl": "https://github.com/jeffreylanters/unity-canvas-visualizer",
+  "changelogUrl": "https://github.com/jeffreylanters/unity-canvas-visualizer/releases",
+  "licensesUrl": "https://github.com/jeffreylanters/unity-canvas-visualizer/blob/master/LICENSE.md"
 }
